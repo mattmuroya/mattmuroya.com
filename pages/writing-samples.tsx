@@ -23,8 +23,8 @@ export default function Home() {
             Hawaii State Parks RESTful API
           </a>
           , an API built according to the OpenAPI Specification. Each sample
-          demonstrates a different type technical document: a concept, a task,
-          and a reference.
+          demonstrates a different type of technical document: a concept, a
+          task, and a reference.
         </p>
         <ul>
           <li>
