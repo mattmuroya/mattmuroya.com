@@ -1,8 +1,6 @@
 import Head from "next/head";
-import Link from "next/link";
 
-import Layout from "../../components/layout";
-import styles from "../../styles/post.module.css";
+import Layout from "../../components/Layout";
 
 import { GetStaticPaths, GetStaticProps } from "next";
 

@@ -6,7 +6,7 @@ import linkedinLogo from "../assets/images/linkedin-logo.svg";
 import instagramLogo from "../assets/images/instagram-logo.svg";
 import githubLogo from "../assets/images/github-logo.svg";
 
-import styles from "../styles/layout.module.css";
+import styles from "../styles/Layout.module.css";
 
 export default function Layout({
   children,

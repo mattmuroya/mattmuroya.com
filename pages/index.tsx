@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import Layout from "../components/layout";
-import styles from "../styles/home.module.css";
+import Layout from "../components/Layout";
 
 import { GetStaticProps } from "next";
 
@@ -41,7 +40,9 @@ export default function Home({ posts }: Props) {
         </a>
         . I like to play guitar, take photos, and occasionally write code.
       </p>
-      <ul className={styles.links}>
+      <ul
+        style={{ marginTop: "2rem", listStyleType: "none", paddingLeft: "0" }}
+      >
         {posts.map((post) => (
           <li key={post.slug}>
             <Link href={`/posts/${post.slug}`}>
