@@ -8,13 +8,22 @@
   justify-content: space-between;
 }
 
-.main {
+/* .main {
   padding: 3rem 0;
+} */
+
+.header {
+  height: 6rem;
+  display: flex;
+  align-items: center;
 }
 
 .footer {
-  padding: 2rem;
+  margin-top: 4rem;
+  /* padding: 2rem; */
+  height: 6rem;
   display: flex;
+  align-items: center;
   justify-content: center;
   border-top: 1px #999999 solid;
 }

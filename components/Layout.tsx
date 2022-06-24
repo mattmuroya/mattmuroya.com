@@ -1,11 +1,12 @@
 import Head from "next/head";
+import Link from "next/link";
 import Image from "next/image";
 
 import linkedinLogo from "../assets/images/linkedin-logo.svg";
 import instagramLogo from "../assets/images/instagram-logo.svg";
 import githubLogo from "../assets/images/github-logo.svg";
 
-import styles from "../styles/Layout.module.css";
+import styles from "../styles/layout.module.css";
 
 export default function Layout({
   children,
@@ -24,17 +25,17 @@ export default function Layout({
         <meta name="og:title" content="matt muroya" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+      <div>
+        <nav className={styles.header}>
+          {!home && (
+            <Link href="/">
+              <a>&larr; back</a>
+            </Link>
+          )}
+        </nav>
 
-      {/* <header className={styles.header}>
-        {!home && (
-          <Link href="/">
-            <a>&larr; back</a>
-          </Link>
-        )}
-      </header> */}
-
-      <main className={styles.main}>{children}</main>
-
+        <main className={styles.main}>{children}</main>
+      </div>
       <footer className={styles.footer}>
         <div className={styles.social}>
           <a
