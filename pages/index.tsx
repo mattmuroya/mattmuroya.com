@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <Layout home>
       <Head>
-        <title>Matt Muroya</title>
+        <title>matt muroya</title>
       </Head>
 
       <div>
@@ -19,7 +19,7 @@ export default function Home() {
           >
             technical writer
           </a>
-          . I occasionally like to play guitar, take photos, and write code.
+          . I like to play guitar, take photos, and occasionally write code.
         </p>
       </div>
     </Layout>

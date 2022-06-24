@@ -19,7 +19,7 @@ export default function Layout({
       <Head>
         <meta
           name="description"
-          content="Hi! I'm Matt Muroya. I'm a technical writer. I occasionally take photos and write code."
+          content="Hi! I'm Matt. I'm a technical writer. I like to play guitar, take photos, and ocassionally write code."
         />
         <meta name="og:title" content="matt muroya" />
         <meta name="twitter:card" content="summary_large_image" />
