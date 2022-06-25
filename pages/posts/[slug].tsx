@@ -8,7 +8,27 @@ import fs from "fs";
 import matter from "gray-matter";
 import markdownIt from "markdown-it";
 
-const md = markdownIt();
+import hljs from "highlight.js";
+import "highlight.js/styles/github-dark-dimmed.css";
+
+const md: any = markdownIt({
+  html: true,
+  highlight: function (str, lang) {
+    if (lang && hljs.getLanguage(lang)) {
+      try {
+        return (
+          '<pre class="hljs"><code>' +
+          hljs.highlight(str, { language: lang, ignoreIllegals: true }).value +
+          "</code></pre>"
+        );
+      } catch (__) {}
+    }
+
+    return (
+      '<pre class="hljs"><code>' + md.utils.escapeHtml(str) + "</code></pre>"
+    );
+  },
+});
 
 export default function Post({
   frontmatter,
@@ -32,19 +52,6 @@ export default function Post({
 
 // returns obj containing array of all possible paths
 export const getStaticPaths: GetStaticPaths = async () => {
-  // return format:
-  // [
-  //   {
-  //     params: {
-  //       slug: "slug-1",
-  //     },
-  //   },
-  //   {
-  //     params: {
-  //       slug: "slug-2",
-  //     },
-  //   },
-  // ]
   const fileNames = fs.readdirSync("posts");
   const paths = fileNames.map((fileName) => {
     return {

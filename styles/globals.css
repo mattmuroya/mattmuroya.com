@@ -1,17 +1,12 @@
 @font-face {
   font-family: "Inter";
   src: url("../assets/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf");
-  font-weight: 400;
-  font-style: normal;
 }
 
 html,
 body {
-  padding: 0;
-  margin: 0;
   font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  color: #111111;
 }
 
 * {
@@ -24,7 +19,7 @@ h2,
 h3,
 h4,
 h5 {
-  margin-top: 2rem;
+  margin-top: 1.8rem;
   font-variation-settings: "wght" 600;
 }
 
@@ -35,6 +30,11 @@ ol {
   line-height: 1.8rem;
 }
 
+li > ul,
+li > ol {
+  margin-top: 0;
+}
+
 a {
   color: #00a094;
   text-decoration: none;
@@ -43,4 +43,47 @@ a {
 a:hover,
 a:active {
   text-decoration: underline;
+}
+
+hr {
+  margin: 2rem 0;
+}
+
+blockquote {
+  margin: 2rem 0;
+  padding: 2rem;
+  border-radius: 0 5px 5px 0;
+  border-left: #00a094 solid 5px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+blockquote *:first-child {
+  margin-top: 0;
+}
+
+pre {
+  font-size: 16px;
+  margin: 2rem 0;
+  padding: 2rem;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+code {
+  font-size: 0.9rem;
+  /* font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace, serif; */
+  font-family: Consolas, Monaco, Lucida Console, Liberation Mono,
+    DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New;
+}
+
+:not(pre) > code {
+  padding: 0.1rem;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+}
+
+strong {
+  font-variation-settings: "wght" 700;
 }
