@@ -3,25 +3,11 @@ import Link from "next/link";
 import Layout from "../components/Layout";
 
 import { GetStaticProps } from "next";
+import { PostData } from "../types/types";
 
-import fs from "fs";
-import matter from "gray-matter";
+import { getFileNames, getPostsData } from "../utils/utils";
 
-interface Frontmatter {
-  title: string;
-  date: string;
-}
-
-interface Post {
-  slug: string;
-  frontmatter: Frontmatter;
-}
-
-interface Props {
-  posts: Post[];
-}
-
-export default function Home({ posts }: Props) {
+export default function Home({ postsData }: { postsData: PostData[] }) {
   return (
     <Layout home>
       <Head>
@@ -43,7 +29,7 @@ export default function Home({ posts }: Props) {
       <ul
         style={{ marginTop: "2rem", listStyleType: "none", paddingLeft: "0" }}
       >
-        {posts.map((post) => (
+        {postsData.map((post) => (
           <li key={post.slug}>
             <Link href={`/posts/${post.slug}`}>
               <a>{post.frontmatter.title}</a>
@@ -56,20 +42,11 @@ export default function Home({ posts }: Props) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const fileNames = fs.readdirSync("posts");
-  const posts = fileNames.map((fileName) => {
-    const slug = fileName.replace(/\.md$/, "");
-    const fileContents = fs.readFileSync(`posts/${fileName}`, "utf-8");
-    // destructure "data" from matter() return obj as "frontmatter"
-    const { data: frontmatter } = matter(fileContents);
-    return {
-      slug,
-      frontmatter,
-    };
-  });
+  const fileNames = getFileNames();
+  const postsData = getPostsData(fileNames);
   return {
     props: {
-      posts,
+      postsData,
     },
   };
 };

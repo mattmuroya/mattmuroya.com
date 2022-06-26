@@ -2,8 +2,12 @@ import Head from "next/head";
 import Layout from "../../components/Layout";
 import { GetStaticPaths, GetStaticProps } from "next";
 
-import fs from "fs";
 import matter from "gray-matter";
+import {
+  getFileContents,
+  getFileNames,
+  getPossiblePaths,
+} from "../../utils/utils";
 import markdownIt from "markdown-it";
 
 import hljs from "highlight.js";
@@ -50,14 +54,8 @@ export default function Post({
 
 // returns obj containing array of all possible paths
 export const getStaticPaths: GetStaticPaths = async () => {
-  const fileNames = fs.readdirSync("posts");
-  const paths = fileNames.map((fileName) => {
-    return {
-      params: {
-        slug: fileName.replace(/\.md$/, ""),
-      },
-    };
-  });
+  const fileNames = getFileNames();
+  const paths = getPossiblePaths(fileNames);
   return {
     paths,
     fallback: false,
@@ -66,8 +64,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 // gets post data based on params.slug, which is returned as props
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  // ! tells typescript the params won't be null
-  const fileContents = fs.readFileSync(`posts/${params!.slug}.md`, "utf-8");
+  const fileContents = getFileContents(params);
   // destructure data (as "frontmatter") and content
   const { data: frontmatter, content } = matter(fileContents);
   return {
