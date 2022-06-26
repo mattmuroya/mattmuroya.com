@@ -1,7 +1,5 @@
 import Head from "next/head";
-
 import Layout from "../../components/Layout";
-
 import { GetStaticPaths, GetStaticProps } from "next";
 
 import fs from "fs";

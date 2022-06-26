@@ -7,6 +7,9 @@ html,
 body {
   font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-variation-settings: "wght" 400;
 }
 
 * {
@@ -18,9 +21,39 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 {
   margin-top: 1.8rem;
   font-variation-settings: "wght" 600;
+}
+
+h1,
+.h1 {
+  font-size: 2.5rem;
+}
+
+h2,
+.h2 {
+  font-size: 2rem;
+}
+
+h3,
+.h3 {
+  font-size: 1.5rem;
+}
+
+h4,
+.h4 {
+  font-size: 1.2rem;
+}
+
+h5,
+.h5 {
+  font-size: 1rem;
 }
 
 p,
@@ -36,6 +69,7 @@ li > ol {
 }
 
 a {
+  /* color: #0070f3; */
   color: #00a094;
   text-decoration: none;
 }
@@ -49,17 +83,33 @@ hr {
   margin: 2rem 0;
 }
 
-blockquote {
+blockquote,
+.callout {
   margin: 2rem 0;
   padding: 2rem;
   border-radius: 0 5px 5px 0;
-  border-left: #00a094 solid 5px;
-  background-color: #f9f9f9;
-  color: #333;
+
+  background-color: #f3f3f3;
+  color: #282828;
 }
 
-blockquote *:first-child {
+blockquote *:first-child,
+.callout *:first-child {
   margin-top: 0;
+}
+
+blockquote *:last-child,
+.callout *:last-child {
+  margin-bottom: 0;
+}
+
+blockquote {
+  border-left: #999999 solid 5px;
+}
+
+.callout {
+  /* border-left: #f573a1 solid 5px; */
+  border-left: #00a094 solid 5px;
 }
 
 pre {
@@ -81,9 +131,9 @@ code {
 :not(pre) > code {
   padding: 0.1rem;
   border-radius: 5px;
-  background-color: #f7f7f7;
+  background-color: #f3f3f3;
 }
 
 strong {
-  font-variation-settings: "wght" 700;
+  font-variation-settings: "wght" 600;
 }
