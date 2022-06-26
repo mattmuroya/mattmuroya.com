@@ -1,4 +1,4 @@
-import { PostData } from "../types/types";
+import { PostDatum } from "../types/types";
 
 import fs from "fs";
 import matter from "gray-matter";
@@ -7,7 +7,7 @@ export const getFileNames = (): string[] => {
   return fs.readdirSync("posts");
 };
 
-export const getPostsData = (fileNames: string[]): PostData[] => {
+export const getPostsData = (fileNames: string[]): PostDatum[] => {
   return fileNames.map((fileName) => {
     const slug = fileName.replace(/\.md$/, "");
     const fileContents = fs.readFileSync(`posts/${fileName}`, "utf-8");

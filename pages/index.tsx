@@ -3,11 +3,11 @@ import Link from "next/link";
 import Layout from "../components/Layout";
 
 import { GetStaticProps } from "next";
-import { PostData } from "../types/types";
+import { PostDatum } from "../types/types";
 
 import { getFileNames, getPostsData } from "../utils/utils";
 
-export default function Home({ postsData }: { postsData: PostData[] }) {
+export default function Home({ postData }: { postData: PostDatum[] }) {
   return (
     <Layout home>
       <Head>
@@ -29,7 +29,7 @@ export default function Home({ postsData }: { postsData: PostData[] }) {
       <ul
         style={{ marginTop: "2rem", listStyleType: "none", paddingLeft: "0" }}
       >
-        {postsData.map((post) => (
+        {postData.map((post) => (
           <li key={post.slug}>
             <Link href={`/posts/${post.slug}`}>
               <a>{post.frontmatter.title}</a>
@@ -43,10 +43,10 @@ export default function Home({ postsData }: { postsData: PostData[] }) {
 
 export const getStaticProps: GetStaticProps = async () => {
   const fileNames = getFileNames();
-  const postsData = getPostsData(fileNames);
+  const postData = getPostsData(fileNames);
   return {
     props: {
-      postsData,
+      postData,
     },
   };
 };
