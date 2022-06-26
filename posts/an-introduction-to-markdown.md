@@ -19,9 +19,8 @@ the plain text document on GitHub</a>.
 
 Well, sometimes you do have to write HTML; in fact, most Markdown applications
 allow you to insert blocks of HTML if your desired formatting can't be achieved
-with Markdown. This gives you greater control over the developing your webpage's
-semantic structure, search engine optimization (SEO), and accessibility
-features.
+with Markdown. This gives you greater control over your webpage's semantic
+structure, search engine optimization (SEO), and accessibility features.
 
 However, Markdown was not designed to replace HTML for structuring entire
 webpages; it was designed as a supplementary tool to make reading, writing, and

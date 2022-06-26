@@ -2,10 +2,6 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 
-import linkedinLogo from "../assets/images/linkedin-logo.svg";
-import instagramLogo from "../assets/images/instagram-logo.svg";
-import githubLogo from "../assets/images/github-logo.svg";
-
 import styles from "../styles/Layout.module.css";
 
 export default function Layout({
@@ -20,7 +16,7 @@ export default function Layout({
       <Head>
         <meta
           name="description"
-          content="Hi! I'm Matt. I'm a technical writer. I like to play guitar, take photos, and ocassionally write code."
+          content="the personal website of matt muroya."
         />
         <meta name="og:title" content="matt muroya" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -44,7 +40,7 @@ export default function Layout({
             href="https://www.linkedin.com/in/mattmuroya/"
           >
             <Image
-              src={linkedinLogo}
+              src="/linkedin-logo.svg"
               alt="LinkedIn Logo"
               height={28}
               width={28}
@@ -56,7 +52,7 @@ export default function Layout({
             href="https://www.instagram.com/mattmuroya/"
           >
             <Image
-              src={instagramLogo}
+              src="/instagram-logo.svg"
               alt="Instagram Logo"
               height={28}
               width={28}
@@ -67,7 +63,12 @@ export default function Layout({
             rel="noreferrer"
             href="https://github.com/mattmuroya"
           >
-            <Image src={githubLogo} alt="GitHub Logo" height={28} width={28} />
+            <Image
+              src="/github-logo.svg"
+              alt="GitHub Logo"
+              height={28}
+              width={28}
+            />
           </a>
         </div>
       </footer>
