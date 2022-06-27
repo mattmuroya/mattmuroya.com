@@ -75,7 +75,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   // [
   //   {
   //     params: {
-  //       slug: fileName.replace(/\.md$/, ""),
+  //       slug: string
   //     },
   //   };
   // ]
