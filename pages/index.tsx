@@ -5,7 +5,7 @@ import Layout from "../components/Layout";
 import { GetStaticProps } from "next";
 import { PostDatum } from "../types/types";
 
-import { getFileNames, getPostsData } from "../utils/utils";
+import { getFileNames, getPostData } from "../utils/utils";
 
 export default function Home({ postData }: { postData: PostDatum[] }) {
   return (
@@ -43,7 +43,7 @@ export default function Home({ postData }: { postData: PostDatum[] }) {
 
 export const getStaticProps: GetStaticProps = async () => {
   const fileNames = getFileNames();
-  const postData = getPostsData(fileNames);
+  const postData = getPostData(fileNames);
   return {
     props: {
       postData,

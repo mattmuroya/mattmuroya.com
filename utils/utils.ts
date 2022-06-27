@@ -7,7 +7,7 @@ export const getFileNames = (): string[] => {
   return fs.readdirSync("posts");
 };
 
-export const getPostsData = (fileNames: string[]): PostDatum[] => {
+export const getPostData = (fileNames: string[]): PostDatum[] => {
   return fileNames.map((fileName) => {
     const slug = fileName.replace(/\.md$/, "");
     const fileContents = fs.readFileSync(`posts/${fileName}`, "utf-8");
