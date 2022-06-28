@@ -11,6 +11,7 @@ export interface Frontmatter {
 export interface ProjectCardData {
   title: string;
   description: string;
+  image: string;
   github: string;
   demo: string;
 }

@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Layout from "../components/Layout";
+// import TwoTruths from "../components/TwoTruths";
 import ProjectGrid from "../components/ProjectGrid";
 import PostList from "../components/PostList";
 
@@ -25,15 +26,13 @@ export default function Home({
       <Head>
         <title>matt muroya</title>
       </Head>
-
       <h1 className="title">Hi! I&apos;m Matt.</h1>
       <p>
         I&apos;m a technical writer. I like to play guitar, take photos, and
         occasionally write code.
       </p>
-      <h2>Here&apos;s what I&apos;ve been working on.</h2>
+      {/* <TwoTruths /> */}
       <ProjectGrid projects={projects} />
-      <h2>Here&apos;s what&apos;s on my mind.</h2>
       <PostList postData={postData} />
     </Layout>
   );
