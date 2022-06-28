@@ -29,6 +29,19 @@ export const getPostData = (fileNames: string[]): PostDatum[] => {
   });
 };
 
+// sorts the array of post data by date
+export const sortPostData = (postData: PostDatum[]): PostDatum[] => {
+  const toDate = (dateStr: string): Date => {
+    const [day, month, year] = dateStr.split("-");
+    return new Date(Number(year), Number(month) - 1, Number(day));
+  };
+  return postData.sort((a, b) => {
+    return (
+      Number(toDate(b.frontmatter.date)) - Number(toDate(a.frontmatter.date))
+    );
+  });
+};
+
 // gets current projects document for the front page
 export const getProjects = (): ProjectCardData[] => {
   return projects;

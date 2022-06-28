@@ -6,7 +6,12 @@ import PostList from "../components/PostList";
 import { GetStaticProps } from "next";
 import { PostDatum, ProjectCardData } from "../types/types";
 
-import { getFileNames, getPostData, getProjects } from "../utils/utils";
+import {
+  getFileNames,
+  getPostData,
+  sortPostData,
+  getProjects,
+} from "../utils/utils";
 
 export default function Home({
   postData,
@@ -36,7 +41,7 @@ export default function Home({
 
 export const getStaticProps: GetStaticProps = async () => {
   const fileNames = getFileNames();
-  const postData = getPostData(fileNames);
+  const postData = sortPostData(getPostData(fileNames));
   const projects = getProjects();
   return {
     props: {
