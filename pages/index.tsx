@@ -26,7 +26,7 @@ export default function Home({
       <Head>
         <title>matt muroya</title>
       </Head>
-      <h1 className="title">Hi! I&apos;m Matt.</h1>
+      <h1>Hi! I&apos;m Matt.</h1>
       <p>
         I&apos;m a technical writer. I like to play guitar, take photos, and
         occasionally write code.

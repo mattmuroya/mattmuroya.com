@@ -1,35 +1,33 @@
 ---
-title: "An Introduction to Markdown"
+title: "An introduction to Markdown"
 date: "2022-06-24"
 ---
 
-# An Introduction to Markdown
+# An introduction to Markdown
 
 **Markdown** is a plain text syntax, or _markup language_, for adding formatting
 such as headers, paragraphs, lists, italics, and boldface to plain text
-documents. Documents formatted with Markdown can then be converted into other
-markup languages. The most common conversion is HTML, which is used for
-displaying formatted content on the web.
+documents. Documents formatted with Markdown can be converted into other markup
+languages. The most common conversion is HTML, the language for displaying
+content on the web.
 
-In fact, this very article is formatted with Markdown! You can
-<a target="_blank" rel="noreferrer" href="https://github.com/mattmuroya/mattmuroya.com/blob/main/posts/an-introduction-to-markdown.md?plain=1">view
-the plain text document on GitHub</a>.
+In fact, this very article is formatted with Markdown; you can
+[view the plain text document on GitHub](https://github.com/mattmuroya/mattmuroya.com/blob/main/posts/an-introduction-to-markdown.md?plain=1).
 
 ## Why not just write HTML?
 
-Well, sometimes you do have to write HTML; you can actually put HTML directly
-into your Markdown documents if your desired formatting can't be achieved with
-Markdown syntax alone. HTML gives you greater control over your content's
-semantic structure, search engine optimization (SEO), and accessibility
-features.
+Sometimes you _do_ have to write HTML; you can actually put blocks of HTML
+directly into your Markdown documents if your desired output (a styled table,
+for example) can't be achieved with Markdown syntax alone. HTML gives you
+greater control over your content's layout, semantic structure, search engine
+optimization (SEO), and accessibility features.
 
 However, Markdown was not designed to replace HTML for structuring entire
-webpages; it was designed as a _supplementary tool to make reading, writing, and
-editing text content_ on the web easier.
+webpages; it was designed as a supplementary tool to make reading, writing, and
+editing text content on the web easier.
 
-According to
-<a target="_blank" rel="noreferrer" href="https://daringfireball.net/projects/markdown/">John
-Gruber</a>, who invented Markdown with Aaron Swartz in 2004:
+According to [John Gruber](https://daringfireball.net/projects/markdown/), who
+invented Markdown with Aaron Swartz in 2004:
 
 > "The overriding design goal for Markdown’s formatting syntax is to make it as
 > readable as possible. The idea is that a Markdown-formatted document should be
@@ -38,20 +36,19 @@ Gruber</a>, who invented Markdown with Aaron Swartz in 2004:
 
 Since its inception, Markdown has inspired a wide range of variations and
 applications. Many organizations
-(<a target="_blank" rel="noreferrer" href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">GitHub</a>,
-<a target="_blank" rel="noreferrer" href="https://www.reddit.com/wiki/markdown">Reddit</a>,
-and
-<a target="_blank" rel="noreferrer" href="https://stackoverflow.com/editing-help">Stackoverflow</a>,
-for example) maintain their own unique "flavors" of Markdown syntax for
-formatting user-generated content on their platforms.
+([GitHub](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax),
+[Reddit](https://www.reddit.com/wiki/markdown), and
+[Stackoverflow](https://stackoverflow.com/editing-help), for example) maintain
+their own unique "flavors" of Markdown syntax for formatting user-generated
+content on their platforms.
 
 ## Example
 
-To illustrate, let's look at a short example of where you might use Markdown and
-how its syntax compares with HTML. Say you want to post a recipe to your blog:
+To illustrate, here is a short example of where you might use Markdown and how
+its syntax compares with HTML. Say you want to post a recipe to your blog:
 
 <div class="callout">
-<div class="h1">Fruit Salad Recipe</div>
+<div class="h1">Fruit salad recipe</div>
 <p>Enjoy this quick and easy fruit salad recipe just in time for summer!</p>
 <ul>
   <li><strong>Prep time:</strong> 15 minutes</li>
@@ -76,7 +73,7 @@ how its syntax compares with HTML. Say you want to post a recipe to your blog:
 Formatted with HTML, the post might look something like this:
 
 ```html
-<h1>Fruit Salad Recipe</h1>
+<h1>Fruit salad recipe</h1>
 <p>Enjoy this quick and easy fruit salad recipe just in time for summer!</p>
 <ul>
   <li><strong>Prep time:</strong> 15 minutes</li>
@@ -101,7 +98,7 @@ Formatted with HTML, the post might look something like this:
 And here is the same post formatted with Markdown:
 
 ```md
-# Fruit Salad Recipe
+# Fruit salad recipe
 
 Enjoy this quick and easy fruit salad recipe just in time for summer!
 
@@ -124,24 +121,22 @@ Enjoy this quick and easy fruit salad recipe just in time for summer!
 ```
 
 Both documents contain identical content and formatting information, however the
-value of Markdown over HTML _as a writing tool_ is immediately apparent.
-Markdown syntax is fast and easy to read, write, and edit. Not only does HTML
-syntax look cluttered by comparison, but using it to write prose is also tedious
-and inefficient.
+value of Markdown over HTML as a writing tool is clear. Markdown is fast and
+easy to read, write, and edit. Not only does HTML look cluttered by comparison,
+but using it to write and format prose is also tedious and inefficient.
 
 ## Writing with Markdown
 
 Now that you're acquainted with the philosophy and benefits of Markdown, it's
-time to learn how to write it yourself! This section demonstrates basic syntax
-for a few common Markdown elements, as well as their equivalent HTML and a
+time to learn how to write it yourself. This section demonstrates the basic
+syntax for a few common Markdown elements, as well as the equivalent HTML and a
 preview of the rendered output.
 
 Note that this is a non-exhaustive guide; for a complete syntax reference, see
-<a target="_blank" rel="noreferrer" href="https://daringfireball.net/projects/markdown/syntax">the
-official documentation</a>.
+[the official documentation](https://daringfireball.net/projects/markdown/syntax).
 
 If you'd like to follow along, check out John Gruber's Markdown demo tool
-<a target="_blank" rel="noreferrer" href="https://daringfireball.net/projects/markdown/dingus">Dingus.</a>
+[Dingus](https://daringfireball.net/projects/markdown/dingus).</a>
 
 Happy writing!
 
@@ -152,7 +147,7 @@ Happy writing!
 - [Lists](#lists)
 - [Blockquotes](#blockquotes)
 - [Code](#code)
-- [links](#links)
+- [Links](#links)
 
 ### Headings <a name="headings"></a>
 
@@ -162,35 +157,35 @@ of hashes corresponds to the heading level.
 #### Markdown
 
 ```md
-# This is a Level-1 Heading
+# This is a level-1 heading
 
-## This is a Level-2 Heading
+## This is a level-2 heading
 
-### This is a Level-3 Heading
+### This is a level-3 heading
 
-#### This is a Level-4 Heading
+#### This is a level-4 heading
 
-##### This is a Level-5 Heading
+##### This is a level-5 heading
 ```
 
 #### HTML
 
 ```html
-<h1>This is a Level-1 Heading</h1>
-<h2>This is a Level-2 Heading</h2>
-<h3>This is a Level-3 Heading</h3>
-<h4>This is a Level-4 Heading</h4>
-<h5>This is a Level-5 heading</h5>
+<h1>This is a level-1 heading</h1>
+<h2>This is a level-2 heading</h2>
+<h3>This is a level-3 heading</h3>
+<h4>This is a level-4 heading</h4>
+<h5>This is a level-5 heading</h5>
 ```
 
 #### Preview
 
 <div class="callout">
-  <div class=h1>This is a Level-1 Heading</div>
-  <div class="h2">This is a Level-2 Heading</div>
-  <div class="h3">This is a Level-3 Heading</div>
-  <div class="h4">This is a Level-4 Heading</div>
-  <div class="h5">This is a Level-5 heading</div>
+  <div class=h1>This is a level-1 heading</div>
+  <div class="h2">This is a level-2 heading</div>
+  <div class="h3">This is a level-3 heading</div>
+  <div class="h4">This is a level-4 heading</div>
+  <div class="h5">This is a level-5 heading</div>
 </div>
 
 ### Paragraphs <a name="paragraphs"></a>
@@ -286,10 +281,10 @@ Define boldface by placing `**double asterisks**` around the target text.
 
 Lists can be either unordered (bulleted) or ordered (numbered).
 
-Define an unordered list by prefixing each line item with a `- hyphen`.
+Define an unordered list by prefixing each list item with a `- hyphen`.
 
-Define an ordered list by prefixing each line item with a
-`1. consecutive number and period`.
+Define an ordered list by prefixing each list item with a
+`1. number and period`.
 
 #### Markdown
 
