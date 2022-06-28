@@ -7,3 +7,10 @@ export interface Frontmatter {
   title: string;
   date: string;
 }
+
+export interface ProjectCardData {
+  title: string;
+  description: string;
+  github: string;
+  demo: string;
+}

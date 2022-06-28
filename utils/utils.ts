@@ -1,7 +1,9 @@
-import { PostDatum } from "../types/types";
+import { PostDatum, ProjectCardData } from "../types/types";
 
 import fs from "fs";
 import matter from "gray-matter";
+
+import { projects } from "../frontpage/projects";
 
 // fetches an array of file names from the file system
 export const getFileNames = (): string[] => {
@@ -25,6 +27,11 @@ export const getPostData = (fileNames: string[]): PostDatum[] => {
       frontmatter,
     };
   });
+};
+
+// gets current projects document for the front page
+export const getProjects = (): ProjectCardData[] => {
+  return projects;
 };
 
 // converts the array of file names to an array of param objects with a URI path (slug):

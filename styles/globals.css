@@ -71,12 +71,17 @@ li > ol {
 a {
   /* color: #0070f3; */
   color: #00a094;
+  /* color: #f75e1c; */
   text-decoration: none;
 }
 
 a:hover,
 a:active {
   text-decoration: underline;
+}
+
+img {
+  width: 100%;
 }
 
 hr {
@@ -108,7 +113,6 @@ blockquote {
 }
 
 .callout {
-  /* border-left: #f573a1 solid 5px; */
   border-left: #00a094 solid 5px;
 }
 
