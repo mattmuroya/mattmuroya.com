@@ -10,7 +10,7 @@ export const projects: ProjectCardData[] = [
   {
     title: "Hawaii State Parks API",
     description:
-      "OpenAPI Specification-compliant RESTful API built with Python.",
+      "OpenAPI 3.0 Specification-compliant RESTful API built with Python.",
     github: "https://github.com/mattmuroya/hawaii-state-parks-api",
     demo: "https://hawaii-state-parks-api.herokuapp.com/",
   },
