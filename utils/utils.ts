@@ -1,13 +1,13 @@
-import { PostDatum, ProjectCardData } from "../types/types";
+import { PostDatum, ProjectCardData } from '../types/types';
 
-import fs from "fs";
-import matter from "gray-matter";
+import fs from 'fs';
+import matter from 'gray-matter';
 
-import { projects } from "../frontpage/projects";
+import { projects } from '../frontpage/projects';
 
 // fetches an array of file names from the file system
 export const getFileNames = (): string[] => {
-  return fs.readdirSync("posts");
+  return fs.readdirSync('posts');
 };
 
 // converts the array of file names to an array of post data
@@ -19,8 +19,8 @@ export const getFileNames = (): string[] => {
 // ]
 export const getPostData = (fileNames: string[]): PostDatum[] => {
   return fileNames.map((fileName) => {
-    const slug = fileName.replace(/\.md$/, "");
-    const fileContents = fs.readFileSync(`posts/${fileName}`, "utf-8");
+    const slug = fileName.replace(/\.md$/, '');
+    const fileContents = fs.readFileSync(`posts/${fileName}`, 'utf-8');
     const { data: frontmatter }: { data: any } = matter(fileContents);
     return {
       slug,
@@ -32,12 +32,12 @@ export const getPostData = (fileNames: string[]): PostDatum[] => {
 // sorts the array of post data by date
 export const sortPostData = (postData: PostDatum[]): PostDatum[] => {
   const toDate = (dateStr: string): Date => {
-    const [day, month, year] = dateStr.split("-");
+    const [day, month, year] = dateStr.split('-');
     return new Date(Number(year), Number(month) - 1, Number(day));
   };
   return postData.sort((a, b) => {
     return (
-      Number(toDate(b.frontmatter.date)) - Number(toDate(a.frontmatter.date))
+      Number(toDate(a.frontmatter.date)) - Number(toDate(b.frontmatter.date))
     );
   });
 };
@@ -61,7 +61,7 @@ export const getPossiblePaths = (
   return fileNames.map((fileName) => {
     return {
       params: {
-        slug: fileName.replace(/\.md$/, ""),
+        slug: fileName.replace(/\.md$/, ''),
       },
     };
   });
@@ -69,5 +69,5 @@ export const getPossiblePaths = (
 
 // returns the contents of a blog post document as a string
 export const getFileContents = (params: any): string => {
-  return fs.readFileSync(`posts/${params.slug}.md`, "utf-8");
+  return fs.readFileSync(`posts/${params.slug}.md`, 'utf-8');
 };
