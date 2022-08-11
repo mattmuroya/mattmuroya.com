@@ -1,0 +1,16 @@
+.postList {
+  margin-top: 2rem;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.postList > li {
+  margin-top: 1rem;
+}
+
+.date {
+  color: #999999;
+  white-space: nowrap;
+}
+
+/* style={{ marginTop: "2rem", listStyleType: "none", paddingLeft: "0" } */
