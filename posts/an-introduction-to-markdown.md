@@ -1,6 +1,6 @@
 ---
-title: "An introduction to Markdown"
-date: "2022-06-24"
+title: 'An introduction to Markdown'
+date: '2022-06-24'
 ---
 
 # An introduction to Markdown
@@ -128,7 +128,7 @@ but using it to write and format prose is also tedious and inefficient.
 ## Writing with Markdown
 
 Now that you're acquainted with the philosophy and benefits of Markdown, it's
-time to learn how to write it yourself. This section demonstrates the basic
+time to learn how to write it yourself! This section demonstrates the basic
 syntax for a few common Markdown elements, as well as the equivalent HTML and a
 preview of the rendered output.
 
@@ -380,7 +380,7 @@ Yoda
 
 Code snippets can be formatted inline or as blocks.
 
-Define an inline code snippets by placing `` `backticks` `` around the target
+Define an inline code snippet by placing `` `backticks` `` around the target
 text.
 
 Define a code block by placing triple backticks (` ``` `) above and below one or
