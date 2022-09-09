@@ -1,18 +1,18 @@
-import Head from "next/head";
-import Layout from "../components/Layout";
+import Head from 'next/head';
+import Layout from '../components/Layout';
 // import TwoTruths from "../components/TwoTruths";
-import ProjectGrid from "../components/ProjectGrid";
-import PostList from "../components/PostList";
+import ProjectGrid from '../components/ProjectGrid';
+import PostList from '../components/PostList';
 
-import { GetStaticProps } from "next";
-import { PostDatum, ProjectCardData } from "../types/types";
+import { GetStaticProps } from 'next';
+import { PostDatum, ProjectCardData } from '../types/types';
 
 import {
   getFileNames,
   getPostData,
   sortPostData,
   getProjects,
-} from "../utils/utils";
+} from '../utils/utils';
 
 export default function Home({
   postData,
@@ -28,8 +28,8 @@ export default function Home({
       </Head>
       <h1>Hi! I&apos;m Matt.</h1>
       <p>
-        I&apos;m a technical writer. I like to play guitar, take photos, and
-        occasionally write code.
+        I&apos;m a technical writer and software engineer. I also like to play
+        guitar take photos!
       </p>
       {/* <TwoTruths /> */}
       <ProjectGrid projects={projects} />
